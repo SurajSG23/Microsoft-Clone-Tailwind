@@ -122,6 +122,22 @@
         <div><a href="https://www.youtube.com/user/IndiaMicrosoftVideos" target="_blank"><i class="fa-brands fa-youtube text-3xl ease-in-out duration-200 hover:text-red-500 hover:scale-125"></i></a></div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+      const hamburger = document.getElementsByClassName("hamburger")[0];
+      const contents = document.getElementsByClassName("contents")[0];
+      contents.childNodes[1].style.left="-200px"
+      let flag = false;
+      hamburger.addEventListener("click", () => {
+      if (flag) {
+        flag = false;
+        contents.style.visibility = "hidden";
+        contents.childNodes[1].style.left='-200px'
+      } else {
+        flag = true;
+        contents.style.visibility = "visible";
+        contents.childNodes[1].style.left='2px'
+      }
+    });
+    </script>
   </body>
 </html>
